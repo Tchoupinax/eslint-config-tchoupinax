@@ -32,6 +32,7 @@ module.exports = {
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
+    "key-spacing": ["error", { singleLine: { beforeColon: false, afterColon: true } }],
     "no-useless-constructor": "off",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
