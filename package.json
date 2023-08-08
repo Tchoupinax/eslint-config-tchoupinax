@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tchoupinax",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My custom config for Typescript",
   "author": "Tchoupinax <corentinfiloche@hotmail.fr> (https://corentinfiloche.xyz)",
   "main": "index.js",
@@ -8,7 +8,7 @@
   "keywords": [
     "eslint"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "6.2.0",
     "@typescript-eslint/parser": "6.2.0",
     "eslint": "8.46.0",
