@@ -15,3 +15,16 @@ module.exports = {
   ],
 };
 ```
+
+## List of dependencies
+
+```bash
+yarn install -D \
+@typescript-eslint/eslint-plugin \
+eslint-plugin-import \
+eslint-plugin-n \
+eslint-plugin-promise \
+eslint-plugin-simple-import-sort \
+eslint-plugin-typescript-sort-keys \
+eslint-plugin-unused-imports
+```
