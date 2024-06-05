@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tchoupinax",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "My custom config for Typescript",
   "author": "Tchoupinax <corentinfiloche@hotmail.fr> (https://corentinfiloche.xyz)",
   "main": "index.js",
