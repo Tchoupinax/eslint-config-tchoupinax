@@ -35,7 +35,6 @@ pnpm install -D eslint-config-tchoupinax
 import { eslintTypescript } from "eslint-config-tchoupinax";
 
 export default eslintTypescript;
-
 ```
 
 ## Prettier

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tchoupinax",
-  "version": "2.0.0-rc4",
+  "version": "2.0.0-rc6",
   "description": "My custom configuration for for Typescript",
   "author": "Tchoupinax <corentinfiloche@hotmail.fr> (https://corentinfiloche.xyz)",
   "license": "MIT",
@@ -11,18 +11,19 @@
   "type": "module",
   "main": "index.mjs",
   "scripts": {
-    "lint": "prettier --write . && eslint --fix .",
+    "lint": "eslint --fix .",
+    "lint:inspect": "npx @eslint/config-inspector@latest",
     "alpha": "npm publish --tag alpha"
   },
   "dependencies": {
+    "@stylistic/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^8.56.0",
     "eslint": "10.0.1",
     "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsonc": "3.0.0",
-    "eslint-plugin-prettier": "5.5.5",
-    "eslint-plugin-simple-import-sort": "12.1.1"
-  },
-  "devDependencies": {
-    "prettier": "3.8.1",
+    "eslint-plugin-simple-import-sort": "12.1.1",
     "typescript-eslint": "^8.56.0"
   },
   "packageManager": "pnpm@10.30.1"
