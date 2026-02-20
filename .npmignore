@@ -1,1 +1,7 @@
-.nvmrc
+**
+
+!package.json
+!pnpm-lock.yaml
+
+!README.md
+!src/typescript.mjs

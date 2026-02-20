@@ -10,9 +10,7 @@ npm install -D eslint-config-tchoupinax
 
 ```js
 module.exports = {
-  extends: [
-    "eslint-config-tchoupinax",
-  ],
+  extends: ["eslint-config-tchoupinax"],
 };
 ```
 
