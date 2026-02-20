@@ -1,29 +1,13 @@
+// Formatting only; import sorting is handled by ESLint (simple-import-sort).
 const prettierTypescript = {
-	plugins: ["@trivago/prettier-plugin-sort-imports", "@ianvs/prettier-plugin-sort-imports"],
-
 	arrowParens: "avoid",
 	bracketSpacing: true,
-
-	importOrder: [
-		// 1️⃣ Node / external packages
-		"^node$",
-		"^@?\\w",
-		// 2️⃣ Internal aliases (#something)
-		"^#.*",
-		// 3️⃣ Relative imports
-		"^[./]",
-	],
-	importOrder: ["^[./]"],
-	importOrderCaseInsensitive: true,
-	importOrderParserPlugins: ["typescript"],
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
+	bracketSameLine: false,
 
 	parser: "typescript",
 	printWidth: 100,
 	quoteProps: "consistent",
-
-	bracketSameLine: false,
+	
 	semi: true,
 	singleQuote: false,
 	tabWidth: 2,

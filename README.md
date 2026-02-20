@@ -58,3 +58,7 @@ export default prettierTypescript;
   }
 }
 ```
+
+## Sources
+
+- https://medium.com/@python-javascript-php-html-css/optimizing-typescript-imports-configuring-prettier-and-eslint-for-multi-line-format-ec282b65d64e

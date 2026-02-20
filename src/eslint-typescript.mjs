@@ -1,5 +1,6 @@
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier";
+import eslintPluginPrettier from "eslint-plugin-prettier";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
@@ -29,29 +30,25 @@ const eslintTypescript = defineConfig(
 			},
 		},
 		plugins: {
-			"eslint-plugin-prettier": eslintPluginPrettierRecommended,
+			"prettier": eslintPluginPrettier,
 			"simple-import-sort": simpleImportSort,
-			"@typescript-eslint/no-explicit-any": {},
+		},
+		rules: {
+			// Prettier handles formatting
+			"prettier/prettier": "error",
+			// ESLint handles import sorting
+			// https://github.com/lydell/eslint-plugin-simple-import-sort
+			"simple-import-sort/imports": [
+				"error",
+				{
+					"groups": [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
+				},
+			],
+			"simple-import-sort/exports": "error",
 		},
 	},
-	{
-		plugins: {
-			"simple-import-sort": simpleImportSort,
-			"ignores": ["package.json"],
-			"rules": {
-				// https://github.com/lydell/eslint-plugin-simple-import-sort
-				"simple-import-sort/imports": [
-					"error",
-					{
-						// https://dev.to/receter/automatic-import-sorting-in-vscode-275m
-						groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
-						"newlines-between": "always",
-					},
-				],
-				"simple-import-sort/exports": "error",
-			},
-		},
-	},
+	// Disable ESLint formatting rules so Prettier wins (must be last)
+	eslintConfigPrettier,
 	{
 		files: ["**/*.json"],
 		ignores: ["package.json"],
