@@ -1,1 +1,2 @@
-export { typescriptConfig } from "./src/typescript.mjs";
+export { eslintTypescript } from "./src/eslint-typescript.mjs";
+export { prettierTypescript } from "./src/prettier-typescript.mjs";

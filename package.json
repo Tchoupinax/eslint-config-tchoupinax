@@ -8,19 +8,23 @@
     "eslint",
     "prettier"
   ],
-  "main": "index.mjs",
   "type": "module",
+  "main": "index.mjs",
   "scripts": {
-    "lint": "prettier --write . && eslint --fix ."
+    "lint": "prettier --write . && eslint --fix .",
+    "alpha": "npm publish --tag alpha"
   },
   "dependencies": {
-    "eslint": "^10.0.1",
+    "eslint": "10.0.1",
     "eslint-plugin-jsonc": "3.0.0",
     "eslint-plugin-prettier": "5.5.5"
   },
   "devDependencies": {
-    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "eslint-plugin-simple-import-sort": "12.1.1",
     "prettier": "3.8.1",
     "typescript-eslint": "^8.56.0"
-  }
+  },
+  "packageManager": "pnpm@10.30.1"
 }

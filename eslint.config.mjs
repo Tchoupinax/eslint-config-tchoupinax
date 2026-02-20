@@ -1,3 +1,3 @@
-import { typescriptConfig } from "./index.mjs";
+import { eslintTypescript } from "./index.mjs";
 
-export default typescriptConfig;
+export default eslintTypescript;

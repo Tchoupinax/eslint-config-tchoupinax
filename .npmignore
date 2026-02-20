@@ -4,4 +4,8 @@
 !pnpm-lock.yaml
 
 !README.md
-!src/typescript.mjs
+
+!src/eslint-typescript.mjs
+!src/prettier-typescript.mjs
+
+!.prettierignore
