@@ -4,11 +4,20 @@ const prettierTypescript = {
 	arrowParens: "avoid",
 	bracketSpacing: true,
 
-	//importOrder: ["^[./]"],
-	//importOrderCaseInsensitive: true,
-	//importOrderParserPlugins: ["typescript"],
-	//importOrderSeparation: true,
-	//importOrderSortSpecifiers: true,
+	importOrder: [
+		// 1️⃣ Node / external packages
+		"^node$",
+		"^@?\\w",
+		// 2️⃣ Internal aliases (#something)
+		"^#.*",
+		// 3️⃣ Relative imports
+		"^[./]",
+	],
+	importOrder: ["^[./]"],
+	importOrderCaseInsensitive: true,
+	importOrderParserPlugins: ["typescript"],
+	importOrderSeparation: true,
+	importOrderSortSpecifiers: true,
 
 	parser: "typescript",
 	printWidth: 100,

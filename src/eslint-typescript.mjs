@@ -45,6 +45,7 @@ const eslintTypescript = defineConfig(
 					{
 						// https://dev.to/receter/automatic-import-sorting-in-vscode-275m
 						groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
+						"newlines-between": "always",
 					},
 				],
 				"simple-import-sort/exports": "error",

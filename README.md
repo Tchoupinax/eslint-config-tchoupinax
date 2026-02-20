@@ -32,9 +32,10 @@ pnpm install -D eslint-config-tchoupinax
 
 ```ts
 // eslint.config.mjs
-import { eslintTypescript } from "./index.mjs";
+import { eslintTypescript } from "eslint-config-tchoupinax";
 
 export default eslintTypescript;
+
 ```
 
 ## Prettier
@@ -43,7 +44,7 @@ export default eslintTypescript;
 
 ```ts
 // prettier.config.mjs
-import { prettierTypescript } from "./index.mjs";
+import { prettierTypescript } from "eslint-config-tchoupinax";
 
 export default prettierTypescript;
 ```
