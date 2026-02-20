@@ -37,8 +37,6 @@ import { eslintTypescript } from "./index.mjs";
 export default eslintTypescript;
 ```
 
---
-
 ## Prettier
 
 ### Import configuration
