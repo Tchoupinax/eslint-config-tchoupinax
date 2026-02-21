@@ -38,6 +38,8 @@ const eslintTypescript = defineConfig(
       "**/build/**",
       "**/dist/**",
       "**/examples/**",
+      // Exclude generated files
+      "**/*.generated.ts",
     ],
   },
   {
