@@ -9,7 +9,7 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
-    "source.organizeImports": "always"
+    "source.organizeImports": "never"
   },
   "eslint.format.enable": true
 }
