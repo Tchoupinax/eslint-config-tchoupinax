@@ -2,28 +2,30 @@
 
 ## Installation
 
+⚠️ `eslint` dependency is necessary when you use vscode extension for ESlint to activate it...
+
 ### [ni](https://github.com/antfu-collective/ni)
 
 ```bash
-ni -D eslint-config-tchoupinax
+ni -D eslint-config-tchoupinax eslint
 ```
 
 ### npm
 
 ```bash
-npm install -D eslint-config-tchoupinax
+npm install -D eslint-config-tchoupinax eslint
 ```
 
 ### yarn
 
 ```bash
-yarn add -D eslint-config-tchoupinax
+yarn add -D eslint-config-tchoupinax eslint
 ```
 
 ### pnpm
 
 ```bash
-pnpm install -D eslint-config-tchoupinax
+pnpm install -D eslint-config-tchoupinax eslint
 ```
 
 ## Eslint
@@ -35,27 +37,6 @@ pnpm install -D eslint-config-tchoupinax
 import { eslintTypescript } from "eslint-config-tchoupinax";
 
 export default eslintTypescript;
-```
-
-## Prettier
-
-### Import configuration
-
-```ts
-// prettier.config.mjs
-import { prettierTypescript } from "eslint-config-tchoupinax";
-
-export default prettierTypescript;
-```
-
-### Import ignore file
-
-```json
-{
-  "scripts": {
-    "format": "prettier . --write --ignore-path node_modules/eslint-config-tchoupinax/.prettierignore"
-  }
-}
 ```
 
 ## Sources
