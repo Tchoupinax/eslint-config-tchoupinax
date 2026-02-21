@@ -7,10 +7,14 @@ import tseslint from "typescript-eslint";
 
 const config = {
   plugins: {
-    "simple-import-sort": simpleImportSort,
     "@stylistic": stylistic,
+    "simple-import-sort": simpleImportSort,
   },
   rules: {
+    "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
+    "@stylistic/comma-dangle": "error",
+    "@stylistic/comma-style": "error",
+    "@stylistic/operator-linebreak": ["error", "after"],
     // ESLint handles import sorting
     // https://github.com/lydell/eslint-plugin-simple-import-sort
     "simple-import-sort/imports": [
@@ -19,10 +23,6 @@ const config = {
         groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
       },
     ],
-    "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
-    "@stylistic/comma-dangle": "error",
-    "@stylistic/comma-style": "error",
-    "@stylistic/operator-linebreak": ["error", "after"],
   },
 };
 
@@ -54,7 +54,6 @@ const eslintTypescript = defineConfig(
         // It improves a lot the efficiency of the lint analysis but it can be very long if the file is complex
         // to parse by typescript.
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
       },
     },
     ...config,

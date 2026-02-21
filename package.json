@@ -1,12 +1,11 @@
 {
   "name": "eslint-config-tchoupinax",
-  "version": "2.0.0-rc8",
+  "version": "2.0.0-rc9",
   "description": "My custom configuration for for Typescript",
   "author": "Tchoupinax <corentinfiloche@hotmail.fr> (https://corentinfiloche.xyz)",
   "license": "MIT",
   "keywords": [
-    "eslint",
-    "prettier"
+    "eslint"
   ],
   "type": "module",
   "main": "index.mjs",
