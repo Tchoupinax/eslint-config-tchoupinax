@@ -6,6 +6,4 @@
 !README.md
 
 !src/eslint-typescript.mjs
-!src/prettier-typescript.mjs
-
-!.prettierignore
+!src/eslint-nuxt.mjs

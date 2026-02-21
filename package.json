@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-tchoupinax",
-  "version": "2.0.0-rc11",
-  "description": "My custom configuration for for Typescript",
+  "version": "2.0.0-rc13",
+  "description": "My custom configuration for ECMAScript",
   "author": "Tchoupinax <corentinfiloche@hotmail.fr> (https://corentinfiloche.xyz)",
   "license": "MIT",
   "keywords": [
@@ -22,6 +22,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsonc": "3.0.0",
+    "eslint-plugin-perfectionist": "^5.6.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "typescript-eslint": "^8.56.0"
   },
