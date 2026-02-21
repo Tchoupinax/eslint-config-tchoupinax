@@ -23,6 +23,7 @@ const config = {
     "@stylistic/comma-dangle": "error",
     "@stylistic/comma-style": "error",
     "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before" } }],
+    "curly": ["error", "all"],
   },
 };
 
