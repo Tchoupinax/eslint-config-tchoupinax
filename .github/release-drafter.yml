@@ -4,6 +4,9 @@ change-template: "- (#$NUMBER) $TITLE — by @$AUTHOR 🫶"
 change-title-escapes: '\<*_&'
 
 categories:
+- title: "⛓️‍💥 Breaking"
+  labels:
+  - "semver:minor"
 - title: "🚀 Features"
   labels:
   - "semver:minor"
