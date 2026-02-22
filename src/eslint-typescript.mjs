@@ -22,7 +22,8 @@ const config = {
     "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "@stylistic/comma-dangle": "error",
     "@stylistic/comma-style": "error",
-    "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before" } }],
+    "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before" } }],
+    "@stylistic/quote-props": ["error", "as-needed"],
     "curly": ["error", "all"],
   },
 };
