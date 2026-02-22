@@ -9,6 +9,9 @@
   ],
   "type": "module",
   "main": "index.mjs",
+  "repository": {
+    "url": "https://github.com/Tchoupinax/eslint-config-tchoupinax"
+  },
   "scripts": {
     "lint": "eslint --fix .",
     "lint:inspect": "npx @eslint/config-inspector@latest",
