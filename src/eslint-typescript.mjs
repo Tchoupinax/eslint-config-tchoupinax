@@ -19,7 +19,7 @@ const config = {
         groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
       },
     ],
-    "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
+    "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: false }],
     "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "@stylistic/comma-dangle": "error",
     "@stylistic/comma-style": "error",
