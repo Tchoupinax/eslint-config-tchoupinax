@@ -67,7 +67,7 @@ jobs:
       run: |
         git add .
         git commit -m "chore: set version to ${{ steps.version.outputs.version }} [skip ci]"
-        git push origin HEAD:${{ github.head_ref }}
+        git push origin HEAD:master
 
     - name: Publish package on NPM 📦
       run: npm publish
