@@ -59,7 +59,7 @@ jobs:
         git config --global user.email "${{ steps.app-user.outputs.id }}+${{ steps.app-user.outputs.login }}@users.noreply.github.com"
 
     - name: Update package.json version
-      run: npm version $VERSION
+      run: npm version $VERSION --no-git-tag-version
       env:
         VERSION: ${{ steps.version.outputs.version }}
 
