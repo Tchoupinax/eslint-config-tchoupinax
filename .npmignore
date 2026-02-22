@@ -1,1 +1,9 @@
-.nvmrc
+**
+
+!package.json
+!pnpm-lock.yaml
+
+!README.md
+
+!src/eslint-typescript.mjs
+!src/eslint-nuxt.mjs

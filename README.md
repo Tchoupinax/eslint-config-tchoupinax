@@ -2,29 +2,43 @@
 
 ## Installation
 
-```bash
-npm install -D eslint-config-tchoupinax
-```
+⚠️ `eslint` dependency is necessary when you use vscode extension for ESlint to activate it...
 
-## How to configure this in the eslint config
-
-```js
-module.exports = {
-  extends: [
-    "eslint-config-tchoupinax",
-  ],
-};
-```
-
-## List of dependencies
+### [ni](https://github.com/antfu-collective/ni)
 
 ```bash
-yarn install -D \
-@typescript-eslint/eslint-plugin \
-eslint-plugin-import \
-eslint-plugin-n \
-eslint-plugin-promise \
-eslint-plugin-simple-import-sort \
-eslint-plugin-typescript-sort-keys \
-eslint-plugin-unused-imports
+ni -D eslint-config-tchoupinax eslint
 ```
+
+### npm
+
+```bash
+npm install -D eslint-config-tchoupinax eslint
+```
+
+### yarn
+
+```bash
+yarn add -D eslint-config-tchoupinax eslint
+```
+
+### pnpm
+
+```bash
+pnpm install -D eslint-config-tchoupinax eslint
+```
+
+## Eslint
+
+### Import configuration
+
+```ts
+// eslint.config.mjs
+import { eslintTypescript } from "eslint-config-tchoupinax";
+
+export default eslintTypescript;
+```
+
+## Sources
+
+- https://medium.com/@python-javascript-php-html-css/optimizing-typescript-imports-configuring-prettier-and-eslint-for-multi-line-format-ec282b65d64e
