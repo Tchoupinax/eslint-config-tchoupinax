@@ -6,7 +6,7 @@ change-title-escapes: '\<*_&'
 categories:
 - title: "⛓️‍💥 Breaking"
   labels:
-  - "semver:minor"
+  - "semver:major"
 - title: "🚀 Features"
   labels:
   - "semver:minor"
