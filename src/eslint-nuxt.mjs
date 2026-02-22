@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import tsParser from "@typescript-eslint/parser";
 
 import perfectionist from "eslint-plugin-perfectionist";
 
@@ -36,6 +37,15 @@ const eslintNuxt = (async () => {
         "vue/html-self-closing": "off",
         // It's because maybe one day default html component will be called and there are always in one word
         "vue/multi-word-component-names": "off",
+      },
+    },
+    // Parse TypeScript inside Vue SFC <script> blocks (fixes "Unexpected token" errors)
+    {
+      files: ["**/*.vue"],
+      languageOptions: {
+        parserOptions: {
+          parser: tsParser,
+        },
       },
     },
   );
