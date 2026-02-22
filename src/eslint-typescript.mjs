@@ -25,6 +25,7 @@ const config = {
     "@stylistic/comma-style": "error",
     "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before", "?": "before", ":": "before" } }],
     "@stylistic/quote-props": ["error", "as-needed"],
+    "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
     curly: ["error", "all"],
   },
 };
