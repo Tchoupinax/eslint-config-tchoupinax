@@ -19,12 +19,13 @@ const config = {
         groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
       },
     ],
+    "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
     "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "@stylistic/comma-dangle": "error",
     "@stylistic/comma-style": "error",
-    "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before" } }],
+    "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before", "?": "before", ":": "before" } }],
     "@stylistic/quote-props": ["error", "as-needed"],
-    "curly": ["error", "all"],
+    curly: ["error", "all"],
   },
 };
 
