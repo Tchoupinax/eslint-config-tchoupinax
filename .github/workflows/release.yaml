@@ -6,8 +6,10 @@ on:
     - v*
 
 permissions:
-  contents: write
-  packages: write
+  # https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-permissions-settings
+  # https://docs.npmjs.com/trusted-publishers#supported-cicd-providers
+  id-token: write # Required for OIDC
+  contents: read
 
 jobs:
   update-version:
@@ -65,6 +67,6 @@ jobs:
         git push origin HEAD:${{ github.head_ref }}
 
     - name: Publish package on NPM 📦
-      run: npm publish --tag next
+      run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
