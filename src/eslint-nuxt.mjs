@@ -1,8 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import stylistic from "@stylistic/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 
-import perfectionist from "eslint-plugin-perfectionist";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const NUXT_CONFIG_NAMES = [
   "nuxt.config.ts",
@@ -11,7 +12,7 @@ const NUXT_CONFIG_NAMES = [
   "nuxt.config.cjs",
 ];
 
-const eslintNuxt = (async () => {
+const eslintNuxt = await (async () => {
   const cwd = process.cwd();
   if (!isNuxtProject(cwd)) {
     return [];
@@ -29,12 +30,28 @@ const eslintNuxt = (async () => {
   return withNuxt(
     {
       plugins: {
-        perfectionist,
+        "simple-import-sort": simpleImportSort,
+        "@stylistic": stylistic,
       },
       rules: {
+        // ESLint handles import sorting
+        // https://github.com/lydell/eslint-plugin-simple-import-sort
+        "simple-import-sort/imports": [
+          "error",
+          {
+            groups: [["^node", "^@?\\w"], ["^#.*"], ["^[^@]?\\w"]],
+          },
+        ],
+        "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: false }],
+        "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
+        "@stylistic/comma-dangle": "error",
+        "@stylistic/comma-style": "error",
+        "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before", "?": "before", ":": "before" } }],
+        "@stylistic/quote-props": ["error", "as-needed"],
+        "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
         "@typescript-eslint/no-invalid-void-type": "off",
-        "perfectionist/sort-imports": "error",
         "vue/html-self-closing": "off",
+        curly: ["error", "all"],
         // It's because maybe one day default html component will be called and there are always in one word
         "vue/multi-word-component-names": "off",
       },
