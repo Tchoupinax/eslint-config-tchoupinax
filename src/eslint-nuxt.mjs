@@ -44,7 +44,7 @@ const eslintNuxt = await (async () => {
         ],
         "@stylistic/arrow-parens": ["error", "as-needed", { requireForBlockBody: false }],
         "@stylistic/brace-style": ["error", "1tbs", { allowSingleLine: true }],
-        "@stylistic/comma-dangle": "error",
+        "@stylistic/comma-dangle": ["error", "always-multiline"],
         "@stylistic/comma-style": "error",
         "@stylistic/operator-linebreak": ["error", "after", { overrides: { "+=": "before", "|": "before", "?": "before", ":": "before" } }],
         "@stylistic/quote-props": ["error", "as-needed"],
