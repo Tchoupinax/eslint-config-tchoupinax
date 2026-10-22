@@ -16,7 +16,7 @@ jobs:
       uses: tchoupinax/repo-config/shared-actions/steps/node/lint@v0
       with:
         throwOnError: "false"
-        nodeVersion: 24
+        nodeVersion: "24.22.1"
 
   labels:
     name: Autodetect labels 🔍
